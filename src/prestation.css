@@ -1,0 +1,119 @@
+#prestations h1{
+    font-family: "Montserrat-Bold";
+    text-align: center;
+    font-size: 60px;
+    color: black;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+}
+
+#prestations h1::after{
+
+    content: "";
+    display: block;
+    width: 10%;
+    height: 3px;
+    background-color: black;
+    margin: 0.5rem auto 4rem;
+}
+.prestaDetail {
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   margin: 0 auto;
+
+}
+
+.prestation {
+    padding:1rem 3rem;
+}
+#prestations .prestaDetail {
+    width: 55%;
+}
+#prestations .prestaDetail .prestation a img{
+width: 100%;
+margin: 0 auto;
+}
+
+#prestations .prestaDetail .prestation a {
+   text-align: center;
+   text-decoration: none;
+   color: black;
+   text-transform: uppercase;
+   font-weight: bold;
+}
+
+/* section prestation list  */
+
+.prestaList {
+    margin: 3rem 0;
+}
+.prestaList h2{
+    text-align: right;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #cda33b;
+    letter-spacing: 0.3rem;
+}
+.prestaList h2::after{
+    content: "";
+    display: inline-block;
+    width: 50%;
+    height: 10px;
+    background: #eaeaea;
+
+}
+
+.prestaList article{
+    display: flex;
+    justify-content: center;
+}
+.prestaList .prestaImg{
+    width: 25%;
+    padding-right: 1rem;
+}
+.prestaList .prestaImg img{
+    width: 100%;
+}
+.prestaList .content{
+    margin-top: 2rem;
+    width: 50%;
+}
+.prestaList .content .tarifs{
+    text-align: center;
+    padding:2rem;
+  
+}
+.prestaList .content .tarifs h3{
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  color: #cda33b;
+}
+.prestaList .content .tarifs h3::after{
+    content: "";
+    display: block;
+    width: 15%;
+    height: 3px;
+    background: #cda33b;
+    margin: 0 auto;
+  }
+
+  .prestaList .content .tarifs .price{
+    font-size: 1rem;
+    font-weight: bold;
+    
+  }
+  .prestaList .content .reserver a{
+    display: block;
+   text-align: center;
+    padding:2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-family: "Herr Von Muellerhoff", cursive;
+    cursor: pointer;
+  
+}
