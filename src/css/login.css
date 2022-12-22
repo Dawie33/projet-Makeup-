@@ -1,0 +1,75 @@
+#loginForm{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginForm .formImg{
+    width: 45%;
+    
+}
+#loginForm .formImg img{
+  width: 100%;
+}
+
+#loginForm .formContent{
+    width: 50%;
+   text-align: center;
+   margin: 0 auto;
+  
+}
+
+#loginForm .formContent input{
+
+    width: 70%;
+    height: 10vh;
+    box-sizing: border-box;
+    border: 2px solid #eaeaea ;
+    background-color: #fff ;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    border-radius: 5px ;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+ #loginForm h1{
+    font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    margin: 1rem 0;
+    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+
+}
+
+#loginForm form button{
+    display: block;
+    margin: 3rem auto;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    padding: 5px 10px ;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+#loginForm form button:hover{
+    background-color: rgb(187, 183, 183);
+}
+
+@media screen and (max-width:900px)  {
+  
+    
+
+#loginForm h1{
+    font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+
+}
+
+
+}
+
+

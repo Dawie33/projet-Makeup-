@@ -1,0 +1,75 @@
+/* général */
+@font-face {
+  font-family:"Montserrat";
+  src:url(../../public/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+body{
+  font-family:"Montserrat", Arial, Helvetica, sans-serif;
+  
+}
+* {
+  margin:0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;  
+  
+}
+
+/* section about adele */
+
+#about article{
+  display: flex;
+  justify-content: flex-end;
+  margin: 5rem auto;
+  width: 80%;
+  background-color: white;
+
+}
+.aboutAdele{
+  width: 80%;
+  margin: 1rem;
+      
+}
+#about .aboutAdele .content{
+  width: 100%;
+}
+.aboutAdele h3{
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+.imgAdele{
+  width: 80%;
+}
+.imgAdele img{
+
+width: 100%;
+}
+
+
+@media screen and (max-width:900px)  {
+ 
+#about article{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
+  width: 100%;
+  background-color: white;
+
+} 
+#about .aboutAdele .content{
+  text-align: center;
+  width: 100%;
+  padding-left: 2rem;
+}
+
+  .imgAdele{
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+}
+
+
+  
+

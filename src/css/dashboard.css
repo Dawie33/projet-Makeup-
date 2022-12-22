@@ -1,0 +1,95 @@
+#dashboard h1{
+ 
+    font-family: "Montserrat-Bold";
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+
+
+}
+.dashboard_items{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    
+}
+
+#dashboard .dashboard_items h2{
+
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+
+}
+
+
+.resa_list{
+    display: flex;
+    flex-direction: column;
+}
+
+.resaDetail{
+    margin: 2rem 0;
+    width: 100%;
+
+    border-radius: 5px;
+}
+
+
+#reservation a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    border: 1px solid black;
+}
+.resaDetail p:first-child{
+    border: 1px solid rgba(14, 52, 96, 0.834) ;
+    background-color:rgba(14, 52, 96, 0.834) ;
+    color: white;
+    font-size: 18px;
+}
+
+.resaDetail p {
+    padding: 0.5rem 0 0 0.5rem;
+    color: black;
+    display: block;
+}
+
+/* contact */
+
+#contactList{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    width: 100%;
+}
+
+.contact_details{
+    margin: 2rem 0;
+    
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+#contactList a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+
+}
+.resaDetail p:first-child{
+    border: 1px solid rgba(14, 52, 96, 0.834) ;
+    background-color:rgba(14, 52, 96, 0.834) ;
+    color: white;
+    font-size: 18px;
+}
+
+.resaDetail p {
+    padding: 0.5rem 0 0 0.5rem;
+    color: black;
+}

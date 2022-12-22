@@ -1,11 +1,18 @@
 
-import About from "./About"
+import Home from "./components/Home"
 import Prestations from "./Prestations";
 import Login from "./Login";
-import ContactFormulaire from "./ContactFormulaire"
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import UserPage from "./UserPage";
-import Formulaire from "./Formulaire";
+
+import FormResa from "./FormResa";
+import Contact from "./Contact";
+import Signup from "./Signup";
+import Users from "./components/Users";
+import SingleReservation from "./SingleReservation";
+import Dashboard from "./Dashboard";
+import SingleContact from "./SingleContact";
+
+
 
 function App() {
 
@@ -13,12 +20,16 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/accueil" element={<About/>} />
+          <Route path="/dashboard" element={< Dashboard />} /> 
+          <Route path="/accueil" element={<Home/>} />
           <Route path="/prestations" element={<Prestations />} />
-          <Route path="/formulaire/contact" element={<ContactFormulaire />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/userpage" element={<UserPage />} />
-          <Route path="/réserver" element={<Formulaire />} />
+          <Route path="/reservation/formulaire" element={<FormResa />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/inscription" element={<Signup />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/reservations/:reservationId" element={<SingleReservation />} />
+          <Route path="/contacts/:contactId" element={<SingleContact />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,7 +1,8 @@
 
-import Nav from "./Nav";
-import Footer from "./Footer";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import {  useNavigate } from "react-router";
+import "./css/login.css"
 
 function Login () {
 
@@ -32,7 +33,7 @@ function Login () {
         if(jwtResponse.status === 200){
 
             localStorage.setItem('jwt', JSON.stringify(logindata));
-            navigate("/userpage");
+            navigate("/dashboard");
         }
         else{
             navigate("/accueil");
@@ -42,29 +43,38 @@ function Login () {
 
     return (
     <>
-        <Nav />
-        
-        <form onSubmit={handleSubmit}>
-                
-            <label htmlFor="email">email *</label><br />
-            <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="email"
-                required
-            /><br /><br />
+       <Navbar />
 
-            <label htmlFor="password">password *</label><br />
-            <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="password"
-                required
-            /><br /><br />
-             <button type="submit" >login </button>
-        </form>
+        <section id="loginForm">
+            <div className="formImg">
+                <img src="../img/pexels-𝐕𝐞𝐧𝐮𝐬-𝐇𝐃-𝐌𝐚𝐤𝐞-𝐮𝐩-&-𝐏𝐞𝐫𝐟𝐮𝐦𝐞-1749452.jpg" alt=""></img>
+            </div>
+
+            <div className="formContent">
+                <h1> Se Connecter</h1> 
+                <form onSubmit={handleSubmit}>
+                         
+                    <label htmlFor="email"></label><br />
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email "
+                        required
+                    /><br /><br />
+
+                    <label htmlFor="password"></label><br />
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Mot de Passe "
+                        required
+                    /><br /><br />
+                    <button type="submit" >Envoyer </button>
+                </form>
+            </div>
+        </section>
 
         <Footer />  
     </>

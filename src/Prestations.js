@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import PrestationsDetail from "./PrestationDetail";
-import "./prestation.css";
-import Nav from "./Nav";
-import Footer from "./Footer";
+import "./css/prestation.css";
+import Navbar from "./components/Navbar";
+
+import Footer from "./components/Footer";
 
 
 const Prestations = () => {
@@ -24,7 +25,7 @@ const Prestations = () => {
     
     return(
         <>
-            <Nav />
+            <Navbar />
 
             <section id="prestations">
 

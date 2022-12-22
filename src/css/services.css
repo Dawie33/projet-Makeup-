@@ -1,0 +1,108 @@
+    
+/* section services */
+
+
+#services h2{
+    text-align: center;
+    font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: black;
+    margin: 5rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  
+  }
+  #services h2::after {
+    content: "";
+    display: inline-block;
+    width: 25%;
+    height: 2px;
+    background: black;
+   margin-left: 1rem;
+  
+  }
+  #services h2::before {
+    content: "";
+    display: inline-block;
+    width: 25%;
+    height: 2px;
+    background: black;
+    margin-right: 1rem;
+  }
+  .service{
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    width: 80%;
+    grid-gap: 5px;
+   
+  }
+  .service .article3{
+    grid-area: 2/1/2/3 ;
+    
+  }
+
+  
+  .service article{
+    position: relative;
+    
+  }
+    
+    
+  .service article img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+   
+  
+  .service article h4{
+    position:absolute;
+    bottom: 40%;
+    left:50%;
+    transform: translate(-50%);
+    color: rgba(255, 255, 255, 0.616);
+    font-size: 200%;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+    border: 1px solid rgba(255, 255, 255, 0.616);
+    padding: 15px 40px ;
+    
+  }
+ 
+   
+  .service article h4:hover{
+    font-size: 280%;
+  }
+
+@media screen and (max-width:900px)  {
+
+#services h2{
+  font-size: 20px;
+ 
+}
+#services h2::after {
+  width: 10%;
+}
+#services h2::before {
+
+  width: 10%;
+
+}
+
+.service article h4{
+font-size: 120%;
+padding: 10px 15px;
+  
+}
+
+ 
+
+ 
+.service article h4:hover{
+  font-size: 170%;
+}
+  
+    
+}

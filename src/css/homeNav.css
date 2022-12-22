@@ -1,0 +1,181 @@
+
+/* section header */
+
+#header {
+  background-image: url(../../public/img/IMG_20140721_011144.jpg);
+  background-size: 50% ;
+  background-repeat: no-repeat;
+  background-position: bottom left 20%;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.navbar{
+  
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li{
+  padding-right: 20px;
+
+}
+
+nav .logo{
+  width: 150px;
+  margin: 2rem 0 0 3rem;
+
+}
+
+.nav-links .nav-item a{
+  font-family: "Montserrat-bold",Arial, Helvetica, sans-serif;
+  color: black;
+
+}
+
+.nav-item a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #CBA81C;
+  margin: 0 auto;
+  transition: all 0.2s ease-in;
+}
+.nav-item a:hover::after {
+  width: 100%;
+}
+
+.nav-links .btn {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 8px 10px;
+  color: black;
+  font-family: "Montserrat-bold",Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: black;
+  
+  
+}
+
+.nav-links .btn:hover{
+  border: 1px solid  #CBA81C;
+  color: black;
+  background-color: #CBA81C;
+}
+
+.navbar .toggle-icon{
+  display: none;
+}
+
+
+#title {
+  position: absolute;
+  right: 10%;
+  top: 40%;
+}
+
+#title h1 {
+  font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 100px;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  
+  
+}
+#title>p {
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: rgba(0, 0, 0, 0.281);
+  line-height: 1px;
+  text-align: center;
+}
+
+@media screen and (max-width:900px)  {
+
+.navbar{
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.navbar .nav-links{
+  display: none;
+}
+
+.navbar.open{
+  height: 100vh;
+  background-color: #dededb64;  
+}
+.navbar .logo{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: -1;
+ 
+}
+.navbar.open .nav-links{
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+ .navbar.open .nav-links .btn {
+  border: none;
+  font-size: 24px;
+  background-color: #dededb64;
+  border: #dededb64;
+  color: black;
+  
+}
+.navbar.open .nav-links .nav-item{
+  margin: 15px 0;
+  font-size: 24px;
+  color: white;
+}
+
+.navbar .toggle-icon{
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 45px;
+  
+}
+
+
+#title h1 {
+font-size: 40px;
+
+}
+#title p{
+  font-size: 20px;
+}
+#title{
+  top: 80%;
+  right: 25%;
+z-index: -1;
+  margin-top: 2rem;
+}
+#header{
+  background-position:center;
+  background-size: 60%;
+}
+
+
+
+}

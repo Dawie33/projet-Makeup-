@@ -1,0 +1,132 @@
+
+#contact h1{
+    font-family: "Montserrat-Bold";
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+}
+
+
+.contact {
+    display: flex;
+    justify-content:space-around;
+   
+}
+#contact .img {
+    width: 30%;
+}
+#contact img{
+    width: 100%;
+}
+.contact ul {
+   margin-top: 3rem ;
+   padding: 0;
+}
+.contact ul li:first-child{
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+.contact ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.contact li{
+    list-style: none;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+
+#contact form{
+    display: flex;
+    margin: 5rem 0;
+    justify-content: center;
+}
+#contact form label{
+    text-transform: uppercase;
+    padding: 1rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+}
+
+#contact form input {
+
+   width: 100%;
+    height: 7vh;
+    box-sizing: border-box;
+    border: 2px solid #eaeaea ;
+    background-color: #fff ;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    border-radius: 5px ;
+    margin: 1rem;
+}
+
+
+#contact form  textarea {
+    width: 80%;
+    height: 37vh;
+    box-sizing: border-box;
+    border: 2px solid #eaeaea ;
+    padding: 4px 5px 4px 15px ;
+    background-color: #fff ;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    border-radius: 5px ;
+    margin: 1rem;
+}
+
+#contact form .formInput{
+    margin: 1rem 0 1rem 4rem;
+    width: 100%;
+}
+#contact form button{
+    margin: 1rem 1rem;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    padding: 5px 10px ;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact form button:hover{
+    background-color: #CBA81C;
+    border:none;
+}
+
+@media screen and (max-width:900px)  {
+#contact{
+    margin-top: 8rem;
+}
+.contact ul{
+    margin-top: 0;
+}
+.contact li{
+    
+    line-height: 30px;
+}
+#contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+}
+#contact form input {
+    width: 90%; 
+    margin: 16px 0;
+    display: block;
+}
+#contact form .formInput {
+    margin: 0 1rem;
+}
+#contact form  textarea {
+    margin: 0;
+}
+}

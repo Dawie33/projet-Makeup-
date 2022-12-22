@@ -1,0 +1,77 @@
+
+.formSignup h1{
+    font-family: "Montserrat-Bold";
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    font-weight: 700;
+    margin:2rem 0 1rem 0;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+}
+
+.formSignup h1::after{
+    content: "";
+    display: block;
+    width: 10%;
+    height: 3px;
+    background-color: black;
+    margin: 0.5rem auto;
+}
+.formSignup{
+    width: 30%;
+    margin: 0 auto ;
+}
+
+.formSignup form input {
+
+    width: 100%;
+    height: 7vh;
+    box-sizing: border-box;
+    border: 2px solid #eaeaea ;
+    background-color: #fff ;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    border-radius: 5px ;
+    margin: 1rem 0;
+    text-align: center;
+
+    font-weight: bold;
+  
+}
+.formSignup form  textarea {
+    width: 80%;
+    height: 37vh;
+    box-sizing: border-box;
+    border: 2px solid #eaeaea ;
+    padding: 4px 5px 4px 15px ;
+    background-color: #fff ;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    border-radius: 5px ;
+    margin: 1rem;
+}
+
+fieldset{
+    padding: 1rem 1rem;
+    border: 2px solid #eaeaea ;
+    box-shadow: 5px 7px 7px grey;
+    margin: 5rem 0;
+   
+}
+.formSignup form button{
+    display: block;
+    margin: 3rem auto;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    padding: 5px 10px ;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media screen and (max-width:900px)  {
+  
+    
+.formSignup{
+    width: 80%;
+ 
+}
+   }

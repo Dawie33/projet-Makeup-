@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 
 
 
+
 const PrestationsDetail = (props) => {
 
+ 
     return(
     
     <section id={"prestation-" + props.prestation.id}>
@@ -21,7 +23,7 @@ const PrestationsDetail = (props) => {
                         <p> <span className="price">{props.prestation.price} € / {props.prestation.duration}</span></p>
                         <p><em>"{props.prestation.max_people_number} personnes maximun"</em></p>
                     </div>  
-                    <span className="reserver"> <Link to='/login'>Réserver</Link></span>
+                    <Link to="/userpage"><button>Réserver</button></Link> 
                 </div>
             </article>
         </div>
