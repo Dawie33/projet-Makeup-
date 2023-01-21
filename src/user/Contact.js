@@ -1,8 +1,9 @@
 
-import Footer from "./components/Footer";
-import "./css/contact.css";
+import Footer from "../components/Footer";
+import "../css/contact.css";
 import { useNavigate } from "react-router";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
+import swal from "sweetalert";
 
 
 
@@ -21,27 +22,33 @@ function Contact  () {
         const email = event.target.email.value;
         const description = event.target.description.value;
 
-        const contactresponse= fetch('http://www.localhost/api/contacts', {
-            method: 'put',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                first_name,
-                name,
-                telephone,
-                email,
-                description
-                
-            })
-        });
+        (async () => {
 
-        console.log(contactresponse);
+            const contactresponse= await fetch('http://www.localhost/api/contacts', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    first_name,
+                    name,
+                    telephone,
+                    email,
+                    description
+                    
+                })
+            });
 
-        if(contactresponse.status === 201){
-            navigate("/accueil")
-        }
+            if(contactresponse.status === 201){
+                swal("OK!", "Message Envoyé", "success");
 
+                navigate("/accueil");
+            }
+
+         })();
+
+       
+       
     }
     
 
@@ -52,7 +59,7 @@ function Contact  () {
           
 
             <section id="contact">
-                <h1>Me contacter</h1>
+                <h2>Me contacter</h2>
                 <div className="contact">
                         
                         <ul>

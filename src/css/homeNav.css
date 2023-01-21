@@ -8,6 +8,7 @@
   background-position: bottom left 20%;
   height: 100vh;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 
@@ -99,7 +100,7 @@ nav .logo{
 #title>p {
   font-size: 30px;
   letter-spacing: 3px;
-  color: rgba(0, 0, 0, 0.281);
+  color: #454545;
   line-height: 1px;
   text-align: center;
 }
@@ -138,9 +139,9 @@ nav .logo{
  .navbar.open .nav-links .btn {
   border: none;
   font-size: 24px;
-  background-color: #dededb64;
-  border: #dededb64;
   color: black;
+  background-color: #dededb64;
+
   
 }
 .navbar.open .nav-links .nav-item{
@@ -164,12 +165,16 @@ font-size: 40px;
 }
 #title p{
   font-size: 20px;
+ 
 }
 #title{
-  top: 80%;
-  right: 25%;
-z-index: -1;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
   margin-top: 2rem;
+  margin-bottom: 2rem;
+
 }
 #header{
   background-position:center;

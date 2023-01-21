@@ -1,0 +1,61 @@
+.reservationsDetails{
+    display: block;
+    margin: 2rem auto;
+    width: 60%;
+
+        
+}
+.reservations{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-bottom: 1rem ;  
+    margin: 1rem 1rem;
+
+}
+.reservations p{
+    padding: 5px ;  
+}
+
+.reservations p:first-child{
+   background-color: #cda33b;
+border-bottom: 1px solid black;
+}
+
+#reservationsList a{
+  border: 1px solid #cda33b;
+  padding: 10px 15px;
+  color: black ;
+  font-weight: bold;
+  background-color: #cda33b;
+  border-radius: 5px;
+    cursor: pointer;
+}
+#reservationsList a:hover{
+    border: 1px solid black;
+    padding: 10px 15px;
+    color: black ;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5px;
+  
+  }
+#reservationsList{
+      margin-bottom: 3rem;
+      text-align: center;
+}
+
+@media screen and (max-width:900px)  {
+  
+    
+
+  #reservationsList h2{
+
+      font-size: 30px;
+      margin-top: 8rem;
+   
+  }
+ 
+  
+  
+  }
+  

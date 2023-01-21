@@ -1,95 +1,155 @@
-#dashboard h1{
+.dashboard{
+  height: 100vh;
+}
+.main-items{
+  display: flex;
+  height: 100%;
+
+}
+.navDashboard{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-around;
+    color: white;
+}
+
+.navDashboard h1{
+  color:  white;
+   font-size: 30px;
+}
+
+
+.main_page{
+ display: flex;
+ height: 100vh;
+}
+
+.main-items h2{
+  font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 60px;
+  color: black;
+  font-weight: 700;
+  margin: 8rem 0 1rem 15rem;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+  }
+  
+
+.dashboard_item {
+  margin: 5rem auto ; 
+  text-align: center;
+}
+ .dashboard_item table{
+ text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+.dashboard_item table thead th{
+padding: 5px 20px;
+background-color:#CBA81C;
+color: black;
+
+}
+.dashboard_item  table tbody td{
+
+   padding: 10px;
+
+}
+ .dashboard_item table tbody td a, button{
+    color: black;
+    border: 1px solid black;
+    padding: 5px 5px;
+    margin: 5px;
+    background-color: black;
+    background-color: lightgray;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+ }
+
+ .dashboard_item fieldset{
+    display: flex;
+   width: 50%;
+   padding: 1rem 1rem;
+   border: 2px solid black ;
+    margin: 1rem auto;
+    font-weight: bold;
+}
+.dashboard_item fieldset input{
+  height: 30px;
+  text-align: center;
+  margin: 10px 0;
+  width: 100%;
+}
+.dashboard_item fieldset select{
  
-    font-family: "Montserrat-Bold";
+    width: 100%;
+  }
+.dashboard_item fieldset textarea{
+    height: 100px;
     text-align: center;
-    font-size: 3rem;
-    color: black;
-    font-weight: 700;
-    margin: 2rem 0 1rem 0;
-    text-transform: uppercase;
-    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
-
-
+    margin: 10px 0;
+    width: 300px;
 }
-.dashboard_items{
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-    
+.dashboard_item .btn{
+    text-align: right;
+    margin-right: 9rem;
 }
-
-#dashboard .dashboard_items h2{
-
-    font-size: 1.5rem;
-    color: black;
-    font-weight: 700;
-
+.dashboard_item .btn button{
+  text-align: center;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 8px 15px;
+  color: black;
+  font-family: "Montserrat-bold",Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: black;
+  font-size: 16px;
 }
 
-
-.resa_list{
-    display: flex;
-    flex-direction: column;
+.dashboard_item fieldset .form_items{
+    margin: 0 2rem;
 }
+.title{
 
-.resaDetail{
-    margin: 2rem 0;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+ align-items: center;
+ margin-bottom: 1rem;
+}
+.item_list .title h3{
 
-    border-radius: 5px;
+margin-right: 1rem;
+
 }
 
 
-#reservation a {
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    border: 1px solid black;
-}
-.resaDetail p:first-child{
-    border: 1px solid rgba(14, 52, 96, 0.834) ;
-    background-color:rgba(14, 52, 96, 0.834) ;
-    color: white;
-    font-size: 18px;
-}
+.sidebar{
 
-.resaDetail p {
-    padding: 0.5rem 0 0 0.5rem;
-    color: black;
-    display: block;
-}
-
-/* contact */
-
-#contactList{
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
-    width: 100%;
-}
-
-.contact_details{
-    margin: 2rem 0;
-    
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-
-#contactList a {
-    text-decoration: none;
-    color: black;
-    display: inline-block;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 15%;
+  height: 100%;
 
 }
-.resaDetail p:first-child{
-    border: 1px solid rgba(14, 52, 96, 0.834) ;
-    background-color:rgba(14, 52, 96, 0.834) ;
-    color: white;
-    font-size: 18px;
+.sidebar .sidebar_items{
+  
+ 
+  margin-top: 5rem;
+}
+.sidebar a{
+  color: white;
+  margin: 2rem;
 }
 
-.resaDetail p {
-    padding: 0.5rem 0 0 0.5rem;
-    color: black;
+.sidebar a:hover{
+  color: #CBA81C;
 }

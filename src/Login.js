@@ -4,13 +4,12 @@ import Footer from "./components/Footer";
 import {  useNavigate } from "react-router";
 import "./css/login.css"
 
-function Login () {
+const Login = () => {
 
     const navigate= useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
         const email = event.target.email.value;
         const password = event.target.password.value;
 
@@ -29,11 +28,14 @@ function Login () {
 
         const logindata= await jwtResponse.json();
         
-        
-        if(jwtResponse.status === 200){
+        if(jwtResponse.status === 200 && logindata.roles==="admin"){
 
             localStorage.setItem('jwt', JSON.stringify(logindata));
             navigate("/dashboard");
+
+        } else if(jwtResponse.status === 200 && logindata.roles==="user"){
+            localStorage.setItem('jwt', JSON.stringify(logindata));
+            navigate("/userpage");
         }
         else{
             navigate("/accueil");
@@ -44,38 +46,39 @@ function Login () {
     return (
     <>
        <Navbar />
+       <main>
+            <section id="loginForm">
+                <div className="formImg">
+                    <img src="../img/pexels-𝐕𝐞𝐧𝐮𝐬-𝐇𝐃-𝐌𝐚𝐤𝐞-𝐮𝐩-&-𝐏𝐞𝐫𝐟𝐮𝐦𝐞-1749452.jpg" alt=""></img>
+                </div>
 
-        <section id="loginForm">
-            <div className="formImg">
-                <img src="../img/pexels-𝐕𝐞𝐧𝐮𝐬-𝐇𝐃-𝐌𝐚𝐤𝐞-𝐮𝐩-&-𝐏𝐞𝐫𝐟𝐮𝐦𝐞-1749452.jpg" alt=""></img>
-            </div>
+                <div className="formContent">
+                    <h2> Se Connecter</h2> 
+                    <p><em> ( Vous devez être connecté pour effectuer une réservation )</em></p>
+                    <form onSubmit={handleSubmit}>
+                            
+                        <label htmlFor="email"></label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Email "
+                            required
+                        />
 
-            <div className="formContent">
-                <h1> Se Connecter</h1> 
-                <form onSubmit={handleSubmit}>
-                         
-                    <label htmlFor="email"></label><br />
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email "
-                        required
-                    /><br /><br />
-
-                    <label htmlFor="password"></label><br />
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Mot de Passe "
-                        required
-                    /><br /><br />
-                    <button type="submit" >Envoyer </button>
-                </form>
-            </div>
-        </section>
-
+                        <label htmlFor="password"></label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Mot de Passe "
+                            required
+                        />
+                        <button type="submit" >Envoyer </button>
+                    </form>
+                </div>
+            </section>
+        </main>
         <Footer />  
     </>
     )

@@ -1,46 +1,145 @@
 /* footer */
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+	padding: 2rem 1rem;
+	background-color: black;
+}
 
-footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.187);
-    text-align: center;
-    color:black;
-    
-  }
-  footer a{
-    color: black;
-    text-decoration: none;
-  }
-  
-  footer ul{
-    margin-top: 1rem; 
-    padding: 0;
-  }
-  
-  footer ul li{
-    list-style: none;
-  }
-  footer i {
-    color:black;
-    padding-right: 1rem;
-  }
-  footer .logo{
-    width: 50%;
-  }
-  
-@media screen and (max-width:900px)  {
+/* Footer left */
+footer .footer-left{
+	width: 30%;
+  text-align: center;
+}
 
-  footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.187);
-    text-align: center;
-    color:black;
-    
-  }
-      
+/* logo */
+footer img{
+  width: 60%;
+}
+
+/* Footer links */
+footer .footer-links{
+	color:  white;
+	margin: 2rem ;
+}
+
+footer .footer-links a{
+  	font-weight:400;
+	text-decoration: none;
+	padding:0 0.5rem;
+	color: white;
+	border-right: 1px solid white;
+}
+
+footer .footer-links a:last-child{
+	border: none;
+}
+footer .footer-links a:hover{
+	color: #cda33b;
+}
+
+
+/* Footer Center */
+footer .footer-center{
+	width: 40%;
+  text-align: center;
+  font-size: 16px;
+}
+
+footer .footer-center .icon{
+	background-color:  white;
+	color: black;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 32px;
+	margin: 1rem 1rem 1rem 0;
+}
+
+footer .footer-center i.fa-envelope{
+	font-size: 15px;
+	line-height: 32px;
+}
+
+footer .footer-center p{
+	display: inline-block;
+	color: white;
+  font-weight:400;
+	margin:0;
+}
+footer .footer-center h4{
+	font-size: 20px;
+  color: white;
+}
+
+
+footer .footer-center p a{
+  color: white;
+	text-decoration: none;
+}
+
+
+/* Footer Right */
+
+footer .footer-right{
+	width: 20%;
+}
+
+footer .footer-right .footer-img {
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  width: 100%;
+
+}
+footer .footer-img img{
+
+  width: 100%;
+
+}
+
+footer .footer-icons{
+	margin-top: 25px;
+  text-align: center;
+}
+
+footer .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+@media (max-width: 900px) {
+
+	footer{
+		font-size: 14px;
+		flex-direction: column;
+	}
+
+	footer .footer-left,
+	footer .footer-center,
+	footer .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 2.5rem;
+		text-align: center;
+	}
+
+	footer .footer-center i{
+		margin-left: 0;
+	}
+
 }

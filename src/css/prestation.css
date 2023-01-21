@@ -1,5 +1,5 @@
-#prestations h1{
-    font-family: "Montserrat-Bold";
+h1{
+    font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 60px;
     color: black;
@@ -7,17 +7,8 @@
     margin: 2rem 0 1rem 0;
     text-transform: uppercase;
     text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
-}
-
-#prestations h1::after{
-
-    content: "";
-    display: block;
-    width: 10%;
-    height: 3px;
-    background-color: black;
-    margin: 0.5rem auto 4rem;
-}
+  }
+  
 .prestaDetail {
     margin: 5rem;
     display: grid;
@@ -29,12 +20,11 @@
 .prestation {
     padding:1rem 3rem;
 }
-#prestations .prestaDetail {
+.prestaDetail {
     width: 55%;
 }
 #prestations .prestaDetail .prestation a img{
 width: 100%;
-margin: 0 auto;
 }
 
 #prestations .prestaDetail .prestation a {
@@ -45,14 +35,14 @@ margin: 0 auto;
    font-weight: bold;
 }
 
-/* section prestation list  */
+/* section Prestation info */
 
 .prestaList {
     margin: 3rem 0;
 }
 .prestaList h2{
     text-align: right;
-    margin-bottom: 35px;
+    margin-bottom: 2rem;
     font-size: 2rem;
     font-weight: normal;
     color: #cda33b;
@@ -79,8 +69,10 @@ margin: 0 auto;
     width: 100%;
 }
 .prestaList .content{
-    margin-top: 2rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
     width: 50%;
+   
 }
 .prestaList .content .tarifs{
     text-align: center;
@@ -88,7 +80,7 @@ margin: 0 auto;
   
 }
 .prestaList .content .tarifs h3{
-  font-size: 1.5rem;
+  font-size: 25px;
   padding-bottom: 1rem;
   color: #cda33b;
 }
@@ -101,59 +93,57 @@ margin: 0 auto;
     margin: 0 auto;
   }
 
-  .prestaList .content .tarifs .price{
-    font-size: 1rem;
-    font-weight: bold;
+
+.prestaList .content  a{
     
-  }
-  .prestaList .content  button{
-    display: block;
     padding:1rem;
     text-decoration: none;
     color: black;
-    font-size: 2rem;
-    font-family: "Herr Von Muellerhoff", cursive;
+    font-size: 35px ;
+    font-family: "Montserrat-bold", Arial, Helvetica, sans-serif;
     cursor: pointer;
     border: none;
     background-color: white;
-    margin: 0 auto;
-  
+
 }
 
 @media screen and (max-width:900px)  {
-#prestations {
-    margin-top: 9rem;
-}
-#prestations h1{
+    #prestations {
+        margin-top: 9rem;
+    }
+    #prestations h1{
 
-    font-size: 40px;
-}
-.prestaDetail{
-    display: flex;
-    flex-direction: column;
-}
-.prestaList h2{
-    font-size: 1.5rem;
-    text-align: center; 
-    letter-spacing: none;
-}
-.prestaList h2::after{
+        font-size: 40px;
+    }
+    .prestaDetail{
+        display: flex;
+        flex-direction: column;
+    }
+    .prestaList h2{
+        font-size: 30px;
+        text-align: center; 
+        letter-spacing: none;
+    }
+    .prestaList h2::after{
 
-    display: block;
-    margin: 10px auto;
+        display: block;
+        margin: 10px auto;
+        width: 20%;
+        height: 5px;
+        background: #eaeaea;
+    }
+    .prestaList article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    .prestaList .prestaImg{
+        width: 50%;
 
-    width: 20%;
-    height: 5px;
-    background: #eaeaea;
-}
-.prestaList article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-}
-.prestaList .prestaImg{
-    width: 50%;
-
-}
+    }
+    .prestaList .content{
+        margin-top: 2rem;
+        margin-left: 0;
+    }
 }

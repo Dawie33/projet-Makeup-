@@ -1,25 +1,22 @@
-import './css/formResa.css';
-import Navbar from './components/Navbar';
-
-import Footer from './components/Footer';
+import "../css/formResa.css"
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { useNavigate } from 'react-router';
+// 'jimporte ma barre de navigation mon hook et mes composants
 
+// je crée un composant FormResa pour afficher un formulaire de réservation
+const FormResa = () => {
 
-function FormResa() {
+// je déclare ma constante navigate pour utilisation mon hook
+    const navigate = useNavigate();
 
-
-
-   const navigate = useNavigate();
-
-
-
-    const handleSubmit = async (event) => {
-
-
-     
-    
+    // ma fontion handleSumit va récupérer les données de mon formulaire à la validation 
+    const handleSubmit = (event) => {
+    // je supprime levenement rechargement de page
         event.preventDefault();
 
+    // event.target.{Nom de la valeur}.value permet de récupérer la valeur dans le formulaire
+   
         const name = event.target.nom.value;
         const first_name = event.target.prenom.value;
         const date = event.target.date.value;
@@ -28,49 +25,51 @@ function FormResa() {
         const prestation = event.target.prestation.value;
         const description = event.target.description.value;
 
-
+        // je lis le jwt stocké dans le localstorage au moment de l'authentification 
         const jwtLocalStorage=   localStorage.getItem('jwt');
+        // Le localStorage stocke les données sous forme de chaines de caractères je transforme donc la donnée en JSON 
         const jwtconnexion = JSON.parse(jwtLocalStorage).access_token;
-
-
-        const jwtResponse = await fetch('http://www.localhost/api/reservations', {
-            method: 'put',
-            headers: {
-                authorization: 'Bearer' + " " + jwtconnexion,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name,
-                first_name,
-                prestation,
-                date,
-                adress,
-                people_number,
-                description
+    
+        // je réalise mon appel asynchrone vers mon API et j'utilisa la méthode HTTP PUT
+        (async () => {
+            const jwtResponse = await fetch('http://www.localhost/api/reservations',
+             {
+                method: 'PUT',
+                // /* je créé l'en-tête Authorization contenant le JWT */
+                headers: {
+                    authorization: 'Bearer' + " " + jwtconnexion,
+                    'Content-Type': 'application/json'
+                },
+                // je converti les valeur en JSON et j'effectue la requête
+                body: JSON.stringify({
+                    name,
+                    first_name,
+                    prestation,
+                    date,
+                    adress,
+                    people_number,
+                    description
+                    
+                })       
                 
-            })       
-            
-        });
-
-        
-
-       if(jwtResponse.status===201){
-      
-         navigate("/userpage")
-       }
+            });  
+            // si ma requête renvoie un statut 201 (créé) et je navigue vers la page utilisateur
+            if(jwtResponse.status===201){
+                navigate("/userpage")
+            }
+        })();
 
     } 
 
- 
-
+    
     return (
         <>
 
         <Navbar />
-    
         <main>
             <section id='reservation'>
                 <h1>Réserver</h1> 
+                 {/* onsubmit permet de mettre un écouteur d'évèvement click sur le submit */}
                 <form onSubmit={handleSubmit}>
 
                     <div className='formResa'>
@@ -92,15 +91,15 @@ function FormResa() {
                             required
                         />
                     
-                        <label htmlFor="date">date *</label>
+                        <label htmlFor="date">Date *</label>
                         <input
                             type="date"
-                            name="date"
                             id="date"
-                            placeholder="date de l'évènement"
+                            name="date"
                             required
+                           
                         />
-
+                        
                         <label htmlFor="Adresse">Adresse *</label>
                         <input
                             type="text"
@@ -133,22 +132,19 @@ function FormResa() {
                             <option value="Essai mariage">Essai mariage</option>
                             <option value="Mariage">Mariage</option>
                             <option value="Cours de Maquillage">Cours de Maquillage</option>
-                        </select> <br/>
+                        </select> 
                         
-                     
                         <label htmlFor="description">Description de l'évènement</label>
                         <textarea id="description" name="description"  placeholder="Décrivez votre demande" required>
                         </textarea>
                     </div>
 
-                    
+                        
                 </form>
             </section>
-
+            
         </main>
-      
         <Footer />
-     
         </>
     );
 }

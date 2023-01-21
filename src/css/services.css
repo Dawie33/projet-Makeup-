@@ -1,73 +1,70 @@
     
 /* section services */
 
+#services h3{
+  text-align: center;
+  margin: 5rem 1rem 3rem 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #cda33b;
+  letter-spacing: 0.3rem;
+  padding: 0 1rem;
+}
+#services h3::after{
+  content: "";
+  display: inline-block;
+  width: 20%;
+  height: 10px;
+  background: #eaeaea;
+  margin-left: 1rem;
 
-#services h2{
-    text-align: center;
-    font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    color: black;
-    margin: 5rem 0;
-    text-transform: uppercase;
-    font-weight: bold;
+}
+
   
-  }
-  #services h2::after {
+  #services h3::before {
     content: "";
     display: inline-block;
-    width: 25%;
-    height: 2px;
-    background: black;
-   margin-left: 1rem;
-  
-  }
-  #services h2::before {
-    content: "";
-    display: inline-block;
-    width: 25%;
-    height: 2px;
-    background: black;
+    width: 20%;
+    height: 10px;
+    background: #eaeaea;
     margin-right: 1rem;
   }
-  .service{
-    margin: 3rem auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 300px;
-    width: 80%;
-    grid-gap: 5px;
-   
-  }
-  .service .article3{
-    grid-area: 2/1/2/3 ;
-    
-  }
 
+
+  .service{
+    margin: 1rem 0 5rem 0;
+    display: flex;
+    justify-content: center;
+
+  }
   
   .service article{
     position: relative;
-    
+    width: 25%;
+    height: 60vh;
+    margin: 2rem 1rem;
+    border: 5px solid white;
+    box-shadow: 5px 7px 7px grey;
   }
-    
-    
+   
   .service article img{
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
    
-  
   .service article h4{
     position:absolute;
-    bottom: 40%;
+    bottom: -5%;
     left:50%;
     transform: translate(-50%);
-    color: rgba(255, 255, 255, 0.616);
+    color: #cda33b;
     font-size: 200%;
     font-weight: bold;
     transition: all 0.2s ease-in;
     border: 1px solid rgba(255, 255, 255, 0.616);
-    padding: 15px 40px ;
+    padding: 10px 20px ;
+    background-color: white;
     
   }
  
@@ -76,32 +73,43 @@
     font-size: 280%;
   }
 
+
+
+
+
 @media screen and (max-width:900px)  {
 
-#services h2{
+#services h3{
   font-size: 20px;
+  margin: 3rem 0 2rem;
  
 }
-#services h2::after {
-  width: 10%;
+#services h3::after {
+  display: none;
 }
-#services h2::before {
+#services h3::before {
 
-  width: 10%;
+ display: none;
 
+}
+.service{
+  display: block;
+
+}
+.service article{
+display: block;
+ width: 80%;
+ margin: 2rem  auto;
 }
 
 .service article h4{
-font-size: 120%;
+font-size: 200%;
 padding: 10px 15px;
   
 }
-
- 
-
  
 .service article h4:hover{
-  font-size: 170%;
+  font-size: 100%;
 }
   
     

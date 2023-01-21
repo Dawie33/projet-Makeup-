@@ -1,0 +1,89 @@
+/* section about adele */
+
+
+#about {  
+
+    margin: 3rem auto ;
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    align-items: center;
+    color: black;
+  
+  }
+  
+  #about .content{
+    width: 80%;
+    text-align: left;
+    line-height: 30px;
+    padding: 0 2rem;
+   margin-left: 2rem;
+  
+  }
+  
+  .aboutAdele {
+    width: 100%; 
+    text-align: center;
+    
+  }
+  #about .content h3{
+    text-transform: uppercase;
+    padding: 1rem 0;
+ 
+    color:  #cda33b;
+  }
+  #about .content a {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 1rem 0;
+    padding: 5px 15px;
+    color: black;
+    font-family: "Montserrat-bold",Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    
+  }
+  #about .content a:hover{
+    border: 1px solid  #CBA81C;
+    color: black;
+    background-color: #CBA81C;
+  }
+  
+  .adeleImg  {
+    width: 80%;
+    margin-left: 4rem;
+   }
+  
+   .adeleImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
+  
+  @media screen and (max-width:900px)  {
+   
+  #about {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+ 
+  
+  } 
+  #about .content{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  
+    width: 100%;
+
+  }
+  
+    .adeleImg{
+      width: 80%;
+      margin: 0 auto;
+    }
+    
+  }
+  
