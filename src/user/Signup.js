@@ -19,7 +19,7 @@ function Signup () {
         const repassword = event.target.repassword.value;
         const email = event.target.email.value;
 
-
+        
         const jwtResponse= await fetch('http://www.localhost/api/signup', {
             method: 'POST',
             headers: {
@@ -38,7 +38,7 @@ function Signup () {
         }); 
         
         const signupdata= await jwtResponse.json();
-        
+        // si le status de réponse est ok je vais renvoyer vers la page user
         if(jwtResponse.status===200){
             localStorage.setItem('jwt', JSON.stringify(signupdata));
             navigate("/userpage");
@@ -50,9 +50,10 @@ function Signup () {
         <>
             <Navbar />
             <main>
+                {/* création du formulaire pour créer un compte  */}
                 <section className="formSignup">
 
-                    <h2>Inscription</h2>
+                    <h1>Inscription</h1>
 
                     <form onSubmit={Submit}>
                         <fieldset>

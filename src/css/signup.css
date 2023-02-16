@@ -1,6 +1,17 @@
 
+.formSignup h1{
+    font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 60px;
+    color: black;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+  }
+
 .formSignup{
-    width: 50%;
+    width: 40%;
     margin: 3rem auto ;
 }
 
@@ -56,8 +67,9 @@
     width: 80%;
  
 }
-.formSignup h2{
+.formSignup h1{
     font-size: 30px;
+    margin-top: 8rem;
  
 }
    }

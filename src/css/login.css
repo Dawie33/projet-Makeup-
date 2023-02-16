@@ -2,7 +2,8 @@
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 5rem;
+ 
 }
 
 #loginForm .formImg{
@@ -12,11 +13,21 @@
 #loginForm .formImg img{
   width: 100%;
 }
+#loginForm .formContent h1{
 
+    font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 60px;
+    color: black;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+}
 #loginForm .formContent{
     width: 50%;
    text-align: center;
-   margin: 0 auto;
+   margin: 8rem auto;
   
 }
 #loginForm .formContent p {
@@ -34,6 +45,7 @@
     border-radius: 5px ;
     text-align: center;
     font-size: 20px;
+    margin-bottom: 1rem;
 
 }
 

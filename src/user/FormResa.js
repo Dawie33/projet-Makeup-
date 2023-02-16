@@ -2,6 +2,7 @@ import "../css/formResa.css"
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router';
+import swal from "sweetalert";
 // 'jimporte ma barre de navigation mon hook et mes composants
 
 // je crée un composant FormResa pour afficher un formulaire de réservation
@@ -34,10 +35,10 @@ const FormResa = () => {
         (async () => {
             const jwtResponse = await fetch('http://www.localhost/api/reservations',
              {
-                method: 'PUT',
+                method: 'POST',
                 // /* je créé l'en-tête Authorization contenant le JWT */
                 headers: {
-                    authorization: 'Bearer' + " " + jwtconnexion,
+                    authorization: 'Bearer ' + jwtconnexion,
                     'Content-Type': 'application/json'
                 },
                 // je converti les valeur en JSON et j'effectue la requête
@@ -48,17 +49,15 @@ const FormResa = () => {
                     date,
                     adress,
                     people_number,
-                    description
-                    
-                })       
-                
+                    description                
+                })                   
             });  
             // si ma requête renvoie un statut 201 (créé) et je navigue vers la page utilisateur
             if(jwtResponse.status===201){
+                swal("OK!", "Réservation Ajoutée", "success");
                 navigate("/userpage")
             }
         })();
-
     } 
 
     
@@ -80,7 +79,7 @@ const FormResa = () => {
                             id="nom"
                             placeholder="Nom"
                             required
-                        />
+                        /> <br />
 
                         <label htmlFor="Prenom">Prénom *</label>
                         <input
@@ -89,8 +88,7 @@ const FormResa = () => {
                             name="prenom"
                             placeholder="Prénom"
                             required
-                        />
-                    
+                        /><br />
                         <label htmlFor="date">Date *</label>
                         <input
                             type="date"
@@ -98,7 +96,7 @@ const FormResa = () => {
                             name="date"
                             required
                            
-                        />
+                        /><br />
                         
                         <label htmlFor="Adresse">Adresse *</label>
                         <input
@@ -107,7 +105,7 @@ const FormResa = () => {
                             name="adresse"
                             placeholder="Adresse"
                             required
-                        />
+                        /><br />
 
                         <label htmlFor="participant">Nombre de participant *</label>
                         <input
@@ -120,7 +118,7 @@ const FormResa = () => {
                             required
                         />
             
-                        <button type="submit" > Reserver </button>
+                      
                     </div>
                     <div className='formResa' >
                         <label htmlFor="prestation">Prestation *</label>
@@ -132,11 +130,12 @@ const FormResa = () => {
                             <option value="Essai mariage">Essai mariage</option>
                             <option value="Mariage">Mariage</option>
                             <option value="Cours de Maquillage">Cours de Maquillage</option>
-                        </select> 
+                        </select> <br />
                         
-                        <label htmlFor="description">Description de l'évènement</label>
+                        <label htmlFor="description">Description de l'évènement</label><br />
                         <textarea id="description" name="description"  placeholder="Décrivez votre demande" required>
-                        </textarea>
+                        </textarea> <br />
+                        <button type="submit" > Reserver </button>
                     </div>
 
                         

@@ -23,7 +23,7 @@ const UserPage = () => {
             const reservationsResponse= await fetch('http://localhost/api/reservations', {
                 method: 'get',
                 headers: {
-                    authorization: 'Bearer' + " " +jwtconnexion,
+                    authorization: 'Bearer ' + jwtconnexion,
                     'Content-Type': 'application/json'
                 },
             });
@@ -39,41 +39,39 @@ const UserPage = () => {
     return (
         <>
 
-        <Navbar />
-        <section id="reservationsList">
+            <Navbar />
+            <section id="reservationsList">
 
-            <h2> Mes Réservations</h2>
-           
-           
+                <h1> Mes Réservations</h1>
             
-            <div className="reservationsDetails">
-                {reservations.map((reservation) =>{
-
-                    const date = dateFormat(reservation.date, "dd/mm/yyyy");
-
-                    return(  
-
-
-                        <div className="reservations" key={reservation.id}>
-                                       
-                    
-                            <p>{reservation.prestation}</p>
-                            <p>Date: {date}</p>
-                            <p>Lieu: {reservation.adress}</p>
-                            <p>Nombre de participant: {reservation.people_number}</p>
-                    
-                        </div>
-                                        
-                    
-                    )
-
-                })} 
+            
                 
-            </div>
-                <Link to="/reservation/formulaire">Réserver</Link>
-           
-        </section>
-        <Footer />
+                <div className="reservationsDetails">
+                    {reservations.map((reservation) =>{
+
+                        const date = dateFormat(reservation.date, "dd/mm/yyyy");
+
+                        return(  
+
+                            <div className="reservations" key={reservation.id}>
+                                        
+                        
+                                <p>{reservation.prestation}</p>
+                                <p>Date: {date}</p>
+                                <p>Lieu: {reservation.adress}</p>
+                                <p>Nombre de participant: {reservation.people_number}</p>
+                        
+                            </div>
+                                            
+                        
+                        )
+
+                    })} 
+                    
+                </div>
+                    <Link to="/reservation/formulaire">Réserver</Link>
+            </section>
+            <Footer />
         </>
 
 

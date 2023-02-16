@@ -34,7 +34,7 @@
 }
 
 nav .logo{
-  width: 150px;
+  width: 200px;
   margin: 2rem 0 0 3rem;
 
 }
@@ -63,7 +63,6 @@ nav .logo{
   border: 1px solid black;
   padding: 8px 10px;
   color: black;
-  font-family: "Montserrat-bold",Arial, Helvetica, sans-serif;
   color: white;
   background-color: black;
   
@@ -137,12 +136,24 @@ nav .logo{
 
 }
  .navbar.open .nav-links .btn {
+  font-family: "Montserrat-bold",Arial, Helvetica, sans-serif;
   border: none;
   font-size: 24px;
   color: black;
   background-color: #dededb64;
+}
 
-  
+.navbar.open .nav-links .btn::after{
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #CBA81C;
+  margin: 0 auto;
+  transition: all 0.2s ease-in;
+}
+.navbar.open .nav-links .btn:hover::after{
+  width: 100%;
 }
 .navbar.open .nav-links .nav-item{
   margin: 15px 0;
@@ -168,11 +179,10 @@ font-size: 40px;
  
 }
 #title{
-  top: 90%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 
 }
@@ -181,6 +191,12 @@ font-size: 40px;
   background-size: 60%;
 }
 
-
+#title>p {
+  font-size: 15px;
+  letter-spacing: 0;
+  color: #454545;
+  line-height: 1px;
+  text-align: center;
+}
 
 }

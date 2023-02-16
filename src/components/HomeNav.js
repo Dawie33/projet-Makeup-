@@ -58,8 +58,8 @@ function HomeNav() {
                   </>
                   :
                   <>
-                    <li><Link to='/login'className="btn">Se connecter</Link></li>
                     <li><Link to='/inscription'className="btn">S'inscrire</Link></li>
+                    <li><Link to='/login'className="btn">Se connecter</Link></li>
                   </>
                   } 
               </ul>      

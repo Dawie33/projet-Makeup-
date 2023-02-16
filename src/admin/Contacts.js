@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import NavDashboard from "./adminComponents/NavDashboard";
 import Sidebar from "./adminComponents/Sidebar";
-import ContactDetails from "./ContactDetails"; 
+import ContactDetails from "./adminComponents/ContactDetails"; 
 
 
 
@@ -23,7 +23,7 @@ const Contacts = () => {
           const contactsResponse = await fetch('http://wwww.localhost/api/contacts', {
             method: 'GET',
             headers: {
-                authorization: 'Bearer' + " " +jwtconnexion,
+                authorization: 'Bearer '  +jwtconnexion,
                 'Content-Type': 'application/json'
             },
           

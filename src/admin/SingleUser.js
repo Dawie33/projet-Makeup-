@@ -27,7 +27,7 @@ const SingleUser = () =>{
             
                 method: 'GET',
                 headers: {
-                    authorization: 'Bearer' + " " +jwtconnexion,
+                    authorization: 'Bearer ' +jwtconnexion,
                     'Content-Type': 'application/json'
                 },
             })
@@ -39,7 +39,7 @@ const SingleUser = () =>{
 
         })();
          
-    },[])
+    },)
 
     const handleDelete = ()=>{
 
@@ -55,7 +55,7 @@ const SingleUser = () =>{
                 
                 method: 'DELETE',
                 headers: {
-                    authorization: 'Bearer' + " " +jwtconnexion,
+                    authorization: 'Bearer ' +jwtconnexion,
                     'Content-Type': 'application/json'
                 },
             })

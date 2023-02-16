@@ -14,14 +14,12 @@ const Dashboard = () => {
             
             <NavDashboard />
 
-         
-
             <div className="main-items">
 
-              
- 
-              < Sidebar />
-                <h2>TABLEAU DE BORD</h2>
+              <Sidebar />
+                <div>
+                    <h2>TABLEAU DE BORD</h2>
+                </div>
             </div>
 
         </section>

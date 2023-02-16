@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../css/dashboard.css";
 import NavDashboard from "./adminComponents/NavDashboard";
-import UserDetails from "./UserDetails";
+import UserDetails from "./adminComponents/UserDetails";
 import Sidebar from "./adminComponents/Sidebar";
 
 
@@ -22,7 +22,7 @@ const Users =() => {
             const usersResponse= await fetch('http://localhost/api/users', {
                 method: 'GET',
                 headers: {
-                    authorization: 'Bearer' + " " +jwtconnexion,
+                    authorization: 'Bearer '+jwtconnexion,
                     'Content-Type': 'application/json'
                 },
             });

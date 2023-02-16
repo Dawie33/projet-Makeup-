@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "../css/dashboard.css";
-import swal from "sweetalert";
-import PrestationsDetails from "./PrestationsDetails";
+import PrestationsDetails from "./adminComponents/PrestationsDetails";
 import NavDashboard from "./adminComponents/NavDashboard";
 import Sidebar from "./adminComponents/Sidebar";
 
@@ -20,7 +19,7 @@ const Prestations = () =>{
             const prestationsResponse= await fetch('http://localhost/api/prestations', {
                 method: 'GET',
                 headers: {
-                    authorization: 'Bearer' + " " +jwtconnexion,
+                    authorization: 'Bearer '  +jwtconnexion,
                     'Content-Type': 'application/json'
                 },
             });
@@ -61,7 +60,7 @@ const Prestations = () =>{
                                     <th>Prix</th> 
                                     <th>Durée</th>
                                     <th>Participant</th>
-                                    <th>Supprimer</th>
+                                    <th>Sélectionner</th>
                                 </tr>
                             </thead>
                             <tbody>

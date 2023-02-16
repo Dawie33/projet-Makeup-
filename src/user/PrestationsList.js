@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PrestationsInfo from "./PrestationsInfo";
+import PrestationsInfo from "../components/PrestationsInfo";
 import "../css/prestation.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -22,20 +22,18 @@ const PrestationsList = () => {
           const prestationsData = await prestationsResponse.json();
           setPrestations(prestationsData);
           
-      console.log(prestationsData);
+   
         })();
     }, []);
-    
+
     return(
         <>
         {/* j'appelle mon composant Navbar créé auparavant */}
             <Navbar />
             <main>
                 <section id="prestations">
-
                     <h1> Mes Prestations</h1>
-                    <div className="prestaDetail">
-                        
+                    <div className="prestaDetail">                        
                 {/* 
                     Je boucle sur les prestations stockés dans mon state 
                 */}
@@ -44,14 +42,14 @@ const PrestationsList = () => {
                             // je donne une KEY pour identifier chaque élément de liste. 
                             <div key={prestation.id} className="prestation">
                                 {/* je rends l'image et le nom de la prestation cliquable afin de créer une ancre et etre redirigé vers un endroit de la page */}
-                                <a href={"#prestation-" + prestation.id}><img src={prestation.image} alt="" />
+                                <a href={"#prestation-" + prestation.id}><img src={prestation.image} alt="présentation des prestations" />
                                 <p>{prestation.name}</p></a> 
                             </div>
                         )
                         })
                     }
                     </div>
-                
+            </section>
                     {/* je boucle une deuxième fois sur les prestations */}
                     {prestations.map((prestation) => {
                         return(
@@ -59,14 +57,10 @@ const PrestationsList = () => {
                         <PrestationsInfo key={prestation.id} prestation={prestation} />
                         )
                     })}
-                </section>
+               
             </main>
             <Footer />
         </>
-       
     );
-
-
 }
-  
-  export default PrestationsList;
+export default PrestationsList;

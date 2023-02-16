@@ -1,4 +1,14 @@
-
+#contact h1{
+    font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 60px;
+    color: black;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+  }
+  
 
 .contact {
     display: flex;
@@ -73,8 +83,10 @@
 #contact form .formInput{
     margin: 1rem 0 1rem 4rem;
     width: 100%;
+
 }
 #contact form button{
+    display: inline;
     margin: 1rem 1rem;
     font-family: "Montserrat",Arial, Helvetica, sans-serif;
     padding: 5px 10px ;
@@ -118,7 +130,7 @@
 #contact form  textarea {
     margin: 0;
 }
-#contact h2{
+#contact h1{
     font-size: 30px;
     margin-bottom: 5rem;
 }

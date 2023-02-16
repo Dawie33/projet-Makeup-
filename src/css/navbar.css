@@ -15,7 +15,7 @@
 }
 
 .menu-nav .logo{
-  width: 150px;
+  width: 200px;
   margin: 2rem ;  
 
 }
@@ -40,18 +40,15 @@
 }
 
 .nav-list .btn2 {
+  
   display: inline-block;
   padding: 8px 10px;
   color: white;
-  font-family: "Montserrat-bold",Arial, Helvetica, sans-serif;
   background-color: black;
 
 }
 
-.nav-list .btn2:hover{
-  background-color: #CBA81C;
-  color: black;
-}
+
 .menu-nav .toggle-icon{
   display: none;
   }
@@ -86,8 +83,25 @@
   
   }
     .menu-nav.open .nav-list .btn2 {
+      font-family: "Montserrat-bold",Arial, Helvetica, sans-serif;
     font-size: 24px;
   }
+
+  .menu-nav.open .nav-list .btn2::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: #CBA81C;
+    margin: 0 auto;
+    transition: all 0.2s ease-in;
+  }
+  .menu-nav.open .nav-list .btn2:hover::after {
+    width: 100%;
+  }
+
+
+
   .menu-nav.open .nav-list .item{
     margin: 15px 0;
     font-size: 24px;

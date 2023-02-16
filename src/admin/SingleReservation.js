@@ -15,37 +15,32 @@ const SingleReservation = () =>{
    
   
     const [reservation, setreservation] = useState([]);
+    
+    const jwtLocalStorage=   localStorage.getItem('jwt');
+    const jwtconnexion = JSON.parse(jwtLocalStorage).access_token;
    
     useEffect (()=>{
 
-        const jwtLocalStorage=   localStorage.getItem('jwt');
-        const jwtconnexion = JSON.parse(jwtLocalStorage).access_token;
-
         (async () => {
 
-            const reservationResponse = await fetch('http://wwww.localhost/api/reservations/'+ reservationId,{
-                
+            const reservationResponse = await fetch('http://wwww.localhost/api/reservations/'+ reservationId,{         
             method: 'GET',
             headers: {
-                authorization: 'Bearer' + " " +jwtconnexion,
+                authorization: 'Bearer ' + jwtconnexion,
                 'Content-Type': 'application/json'
             },
-            })
-         
+            })         
             const reservationData = await reservationResponse.json();
             setreservation(reservationData);
        
-
         })();
    
-    },[])
+    })
 
 
 
     const handleDelete = ()=>{
 
-        const jwtLocalStorage=   localStorage.getItem('jwt');
-        const jwtconnexion = JSON.parse(jwtLocalStorage).access_token;
 
         (async () => {
 
@@ -54,7 +49,7 @@ const SingleReservation = () =>{
                 
             method: 'DELETE',
             headers: {
-                authorization: 'Bearer' + " " +jwtconnexion,
+                authorization: 'Bearer '  +jwtconnexion,
                 'Content-Type': 'application/json'
             },
             })
@@ -77,9 +72,6 @@ const SingleReservation = () =>{
         const people_number = event.target.participant.value;
         const prestation = event.target.prestation.value;
         const description = event.target.description.value;
-    
-        const jwtLocalStorage=   localStorage.getItem('jwt');
-        const jwtconnexion = JSON.parse(jwtLocalStorage).access_token;
 
         (async () => {
       
@@ -87,7 +79,7 @@ const SingleReservation = () =>{
                     
                 method: 'PATCH',
                 headers: {
-                    authorization: 'Bearer' + " " + jwtconnexion,
+                    authorization: 'Bearer ' + jwtconnexion,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ 
@@ -165,7 +157,6 @@ const SingleReservation = () =>{
                     {!update ?
                     
                         <UpdateReservation handleUpdate={handleUpdate} />
-
                         :
                         <div></div>
                     }

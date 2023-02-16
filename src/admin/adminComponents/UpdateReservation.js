@@ -60,7 +60,7 @@ const UpdateReservation = (props) =>{
                     <button type="submit" > Modifier </button>
                 </div>
             </fieldset>
-
+           
 
         </form>
 

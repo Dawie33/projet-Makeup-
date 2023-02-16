@@ -1,4 +1,4 @@
-h1{
+#prestations h1{
     font-family: "Montserrat-Bold",Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 60px;
@@ -6,7 +6,7 @@ h1{
     font-weight: 700;
     margin: 2rem 0 1rem 0;
     text-transform: uppercase;
-    text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
+    text-shadow: 2px 5px rgba(0, 0, 0, 0.34);
   }
   
 .prestaDetail {
@@ -14,15 +14,13 @@ h1{
     display: grid;
     grid-template-columns: repeat(3,1fr);
    margin: 0 auto;
-
+    width: 55%;
 }
 
 .prestation {
     padding:1rem 3rem;
 }
-.prestaDetail {
-    width: 55%;
-}
+
 #prestations .prestaDetail .prestation a img{
 width: 100%;
 }

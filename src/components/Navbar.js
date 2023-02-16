@@ -58,7 +58,7 @@ const  Navbar = () => {
                 </>
                 :
                 <>
-                  <li><Link to='/reservation/formulaire' className="btn2"> Réservation </Link></li>
+                  <li><Link to='/userpage' className="btn2"> Mon compte </Link></li>
                   <li><Link  onClick={handleLogOut}to='/login' className="btn2">Se déconnecter</Link></li>
                 </>              
                 }

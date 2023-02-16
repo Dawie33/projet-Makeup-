@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
-import { Navigate } from "react-router";
 import NavDashboard from "./adminComponents/NavDashboard";
 import swal from "sweetalert";
 import Sidebar from "./adminComponents/Sidebar";
@@ -23,7 +22,7 @@ const SingleContact = () =>{
             
          method: 'GET',
          headers: {
-             authorization: 'Bearer' + " " +jwtconnexion,
+             authorization: 'Bearer ' +jwtconnexion,
              'Content-Type': 'application/json'
          },
         })
@@ -34,7 +33,7 @@ const SingleContact = () =>{
 
           })();
         
-    },[])
+    },)
 
 
     const handleDelete = ()=>{
@@ -51,7 +50,7 @@ const SingleContact = () =>{
             
             method: 'DELETE',
             headers: {
-                authorization: 'Bearer' + " " +jwtconnexion,
+                authorization: 'Bearer ' +jwtconnexion,
                 'Content-Type': 'application/json'
             },
             })

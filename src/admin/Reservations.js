@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../css/dashboard.css";
-import ReservationDetails from "./ReservationDetails";
+import ReservationDetails from "./adminComponents/ReservationDetails";
 import PutReservation from "./adminComponents/PutReservation";
 import swal from "sweetalert";
 import NavDashboard from "./adminComponents/NavDashboard";
@@ -21,7 +21,7 @@ const Reservations = () => {
             const reservationsResponse= await fetch('http://localhost/api/reservations', {
                 method: 'GET',
                 headers: {
-                    authorization: 'Bearer' + " " +jwtconnexion,
+                    authorization: 'Bearer ' +jwtconnexion,
                     'Content-Type': 'application/json'
                 },
             });
@@ -54,7 +54,7 @@ const Reservations = () => {
             const jwtResponse = await fetch('http://www.localhost/api/reservations', {
                 method: 'PUT',
                 headers: {
-                    authorization: 'Bearer' + " " + jwtconnexion,
+                    authorization: 'Bearer '  + jwtconnexion,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({

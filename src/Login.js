@@ -25,7 +25,6 @@ const Login = () => {
             
             })
         });
-
         const logindata= await jwtResponse.json();
         
         if(jwtResponse.status === 200 && logindata.roles==="admin"){
@@ -53,7 +52,7 @@ const Login = () => {
                 </div>
 
                 <div className="formContent">
-                    <h2> Se Connecter</h2> 
+                    <h1> Se Connecter</h1> 
                     <p><em> ( Vous devez être connecté pour effectuer une réservation )</em></p>
                     <form onSubmit={handleSubmit}>
                             

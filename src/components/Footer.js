@@ -37,18 +37,18 @@ function Footer() {
 
       <div className="footer-right">
         <div className="footer-img">
-          <img src="../img/IMG_20151213_202147.jpg" alt=""/>
-          <img src="../img/IMG_20130717_000059.jpg" alt=""/>
-          <img src="../img/IMG_20140708_113835.jpg" alt=""/>
-          <img src="../img/IMG_20140715_011841.jpg" alt=""/>
-          <img src="../img/IMG_20140721_011144.jpg" alt=""/>
-          <img src="../img/IMG_20151210_115553.jpg" alt=""/>
+          <img src="../img/IMG_20151213_202147.jpg" alt="Adele"/>
+          <img src="../img/IMG_20130717_000059.jpg" alt="Adele"/>
+          <img src="../img/IMG_20140708_113835.jpg" alt="Adele"/>
+          <img src="../img/IMG_20140715_011841.jpg" alt="Adele"/>
+          <img src="../img/IMG_20140721_011144.jpg" alt="Adele"/>
+          <img src="../img/IMG_20151210_115553.jpg" alt="Adele"/>
         </div>
         <div className="footer-icons">
-          <a href="#"><Icon icon={facebook} size={25}/> </a>
-          <a href="#"><Icon icon={instagram} size={25}/></a>
-          <a href="#"><Icon icon={twitter} size={25}/></a>
-          <a href="#"><Icon icon={linkedin} size={25}/></a>
+          <Link><Icon icon={facebook} size={25}/> </Link>
+          <Link><Icon icon={instagram} size={25}/></Link>
+          <Link><Icon icon={twitter} size={25}/></Link>
+          <Link><Icon icon={linkedin} size={25}/></Link>
         </div>
       </div>
 

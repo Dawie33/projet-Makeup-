@@ -15,7 +15,8 @@ import Users from "./admin/Users";
 import Contacts from "./admin/Contacts"
 import Reservations from "./admin/Reservations";
 import Prestations from "./admin/Prestations";
-import DateCalendar from "./components/DateCalendar";
+import SinglePrestation from "./admin/SinglePrestation"
+
 
 
 
@@ -28,9 +29,10 @@ const App =()=> {
 
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/accueil" element={<Home/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/userpage" element={<UserPage />} /> 
-          <Route path="/accueil" element={<Home/>} />
           <Route path="/listeprestations" element={<PrestationsList />} />
           <Route path="/reservation/formulaire" element={<FormResa />} />
           <Route path="/contact" element={<Contact />} />
@@ -44,6 +46,7 @@ const App =()=> {
           <Route path="/users/:userId" element={<SingleUser />} />
           <Route path="/reservations/:reservationId" element={<SingleReservation />} />
           <Route path="/contacts/:contactId" element={<SingleContact />} />
+          <Route path="/prestations/:prestationId" element={<SinglePrestation />} />
         </Routes>
       </BrowserRouter>
 

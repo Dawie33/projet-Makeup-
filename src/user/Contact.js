@@ -4,6 +4,7 @@ import "../css/contact.css";
 import { useNavigate } from "react-router";
 import Navbar from "../components/Navbar";
 import swal from "sweetalert";
+import { Link } from "react-router-dom";
 
 
 
@@ -59,19 +60,19 @@ function Contact  () {
           
 
             <section id="contact">
-                <h2>Me contacter</h2>
+                <h1>Me contacter</h1>
                 <div className="contact">
                         
                         <ul>
                             <li>Adele Make Up Artist :</li>
                             <li>Adele.syly@gmail.com</li>
                             <li>06 00 00 00 00</li>
-                            <li><a href=''><i className="fab fa-facebook"></i> Facebook</a></li>
-                            <li><a href=''><i className="fab fa-youtube"></i> Instagram</a></li>
+                            <li><Link><i className="fab fa-facebook"></i> Facebook</Link></li>
+                            <li><Link><i className="fab fa-youtube"></i> Instagram</Link></li>
                 
                         </ul>
                         <div className="img">
-                            <img src="../img/IMG_20151213_202147.jpg" alt=""/>
+                            <img src="../img/IMG_20151213_202147.jpg" alt=" adèle"/>
                         </div>
                 </div>
 
@@ -108,12 +109,12 @@ function Contact  () {
                             required
                          />
 
-                        
+                          
                     </div>
                     <div className="formInput">
-                        <label htmlFor="description">Votre demande *</label>
+                        <label htmlFor="description">Votre demande *</label> <br />
                         <textarea id="description" name="description"  placeholder="Décrivez votre demande" required>
-                        </textarea>
+                        </textarea> <br />
                         <button type="submit" > Envoyer </button>
                     </div>    
                 </form>

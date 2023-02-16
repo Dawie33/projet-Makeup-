@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import "../css/about.css"
 const About =()=>{
     return(
@@ -19,7 +19,7 @@ const About =()=>{
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. soloribus officia reprehenderit ullam vel est, consequatur numquam. Non nemo laudantium expedita, necessitatibus quas laborum deleniti obcaecati accusantium fugiat autem quos consequuntur velit quis assumenda ipsam minima, amet, eveniet iusto earum incidunt aliquid sapiente placeat vel possimus! Ipsam placeat iste. Lorem, ipsum dolor sit amet consectetur adipisicing elit. soloribus officia reprehenderit ullam vel est, consequatur numquam. Non nemo laudantium expedita, necessitatibus quas laborum deleniti obcaecati accusantium fugiat autem quos 
                 
                     </p>
-                    <a href="#"> En savoir +</a>
+                    <Link> En savoir +</Link>
                  </div>
             </div>
 

@@ -10,17 +10,6 @@
     text-shadow: rgba(0, 0, 0, 0.34) 2px 5px;
 }
 
-#reservation h1::after{
-
-    content: "";
-    display: block;
-    width: 10%;
-    height: 3px;
-    background-color: black;
-    margin: 0.5rem auto 4rem;
-}
-
-
 
 #reservation form{
     display: flex;
@@ -54,7 +43,7 @@
 
 #reservation form  textarea {
     width: 70%;
-    height: 60vh;
+    height: 30vh;
     box-sizing: border-box;
     border: 2px solid #eaeaea ;
     padding: 4px 5px 4px 15px ;
@@ -83,4 +72,26 @@
      color:#CBA81C;
 }
 
+@media screen and (max-width:900px)  {
+  
+    #reservation form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 2rem;
+    }  
+    #reservation form .formResa{
+        margin: 0;
+        width: 100%;
+        
+    }
+    #reservation{
+        margin-top: 8rem;
+    }
 
+    #reservation h1{
+        font-size: 30px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
